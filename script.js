@@ -59,3 +59,12 @@ function drawLine(x1, y1, x2, y2) {
 function updateSizeOnScreen() {
   sizeEl.innerText = size;
 }
+
+increase.addEventListener("click", () => {
+  size -= 5;
+
+  if (size < 5) {
+    size = 5;
+  }
+  updateSizeOnScreen();
+});
