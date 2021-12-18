@@ -1,4 +1,5 @@
 const canvas = document.getElementById("canvas");
+const Increase = document.getElementById("increase");
 const ctx = canvas.getContext("2d");
 
 let size = 20;
@@ -46,6 +47,6 @@ function drawLine(x1, y1, x2, y2) {
   ctx.moveTo(x1, y1);
   ctx.lineTo(x2, y2);
   ctx.strokeStyle = color;
-  ctx.lineWidth = size;
+  ctx.lineWidth = size * 2;
   ctx.stroke();
 }
