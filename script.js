@@ -2,14 +2,14 @@ const canvas = document.getElementById("canvas");
 const increase = document.getElementById("increase");
 const descrease = document.getElementById("decrease");
 const sizeEl = document.getElementById("size");
-const color = document.getElementById("color");
-const clear = document.getElementById("clear");
+const colorEl = document.getElementById("color");
+const clearEl = document.getElementById("clear");
 const ctx = canvas.getContext("2d");
 
-let size = 20;
+let size = 10;
 let isPressed = false;
-color.value = "black";
-let colour = color.value;
+colorEl.value = "black";
+let color = colorEl.value;
 let x;
 let y;
 
@@ -61,6 +61,15 @@ function updateSizeOnScreen() {
 }
 
 increase.addEventListener("click", () => {
+  size += 5;
+
+  if (size > 50) {
+    size = 50;
+  }
+  updateSizeOnScreen();
+});
+
+decrease.addEventListener("click", () => {
   size -= 5;
 
   if (size < 5) {
@@ -68,3 +77,9 @@ increase.addEventListener("click", () => {
   }
   updateSizeOnScreen();
 });
+
+colorEl.addEventListener("change", (e) => (color = e.target.value));
+
+clearEl.addEventListener("click", () =>
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+);
