@@ -10,3 +10,5 @@ function drawCircle(x, y) {
   ctx.fillStyle = color;
   ctx.fill();
 }
+
+drawCircle(100, 200);
