@@ -6,6 +6,8 @@ let color = "black";
 let x;
 let y;
 
+canvas.addEventListener("mousedown", (e) => {});
+
 function drawCircle(x, y) {
   ctx.beginPath();
   ctx.arc(x, y, size, 0, Math.PI * 2);
