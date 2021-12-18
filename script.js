@@ -1,5 +1,6 @@
 const canvas = document.getElementById("canvas");
-const Increase = document.getElementById("increase");
+const increase = document.getElementById("increase");
+const descrease = document.getElementById("decrease");
 const ctx = canvas.getContext("2d");
 
 let size = 20;
