@@ -8,7 +8,8 @@ const ctx = canvas.getContext("2d");
 
 let size = 20;
 let isPressed = false;
-let color = "black";
+color.value = "black";
+let colour = color.value;
 let x;
 let y;
 
