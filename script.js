@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const increase = document.getElementById("increase");
 const descrease = document.getElementById("decrease");
-const size = document.getElementById("size");
+const sizeEl = document.getElementById("size");
 const color = document.getElementById("color");
 const clear = document.getElementById("clear");
 const ctx = canvas.getContext("2d");
@@ -54,4 +54,8 @@ function drawLine(x1, y1, x2, y2) {
   ctx.strokeStyle = color;
   ctx.lineWidth = size * 2;
   ctx.stroke();
+}
+
+function updateSizeOnScreen() {
+  sizeEl.innerText = size;
 }
