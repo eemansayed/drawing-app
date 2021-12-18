@@ -5,4 +5,5 @@ let size = 20;
 
 function drawCircle(x, y) {}
 ctx.beginPath();
-ctx.arc(x, y, size);
+ctx.arc(x, y, size, 0, Math.PI * 2);
+ctx.fillStyle = color;
