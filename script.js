@@ -7,7 +7,12 @@ let color = "black";
 let x;
 let y;
 
-canvas.addEventListener("mousedown", (e) => {});
+canvas.addEventListener("mousedown", (e) => {
+  isPressed = true;
+
+  x = e.offsetX;
+  y = e.offsetY;
+});
 
 function drawCircle(x, y) {
   ctx.beginPath();
